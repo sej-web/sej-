@@ -69,6 +69,15 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking, onNavigateSchedul
 
           {/* Desktop CTAs */}
           <div className="hidden md:flex items-center gap-3">
+            <a
+              href="tel:+919987684057"
+              className="flex items-center gap-1.5 px-3 py-2 text-xs font-mono text-[#E9E5DC] hover:text-[#C8FF35] border border-transparent hover:border-[#2B302D] rounded-full transition-colors"
+              title="Call to buy membership or passes"
+              id="nav-direct-call"
+            >
+              <Phone className="w-3.5 h-3.5 text-[#C8FF35]" />
+              <span>BUY / INQUIRE: <strong>9987684057</strong></span>
+            </a>
             <button
               onClick={onNavigateSchedule}
               className="px-4 py-2 text-xs font-bold tracking-widest text-[#E9E5DC] border border-[#333835] hover:border-[#C8FF35] hover:text-[#C8FF35] rounded-full transition-all duration-150"
@@ -118,6 +127,25 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking, onNavigateSchedul
           </div>
 
           <div className="mt-8 space-y-4 pt-6 border-t border-[#232725]">
+            {/* Direct Buy Hotline Card */}
+            <a
+              href="tel:+919987684057"
+              className="flex items-center justify-between p-3.5 rounded-xl bg-[#151817] border border-[#2B302D] active:border-[#C8FF35] transition-colors"
+            >
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 rounded-full bg-[#C8FF35]/15 text-[#C8FF35] flex items-center justify-center">
+                  <Phone className="w-4 h-4" />
+                </div>
+                <div>
+                  <span className="text-[10px] font-mono uppercase text-[#87908A] block">WANT TO BUY? CALL DIRECT:</span>
+                  <span className="text-sm font-bold text-[#E9E5DC] font-mono">+91 99876 84057</span>
+                </div>
+              </div>
+              <span className="text-[10px] font-mono font-bold text-[#0B0D0C] bg-[#C8FF35] px-2.5 py-1 rounded-full">
+                CALL
+              </span>
+            </a>
+
             <div className="flex items-center gap-2 text-xs text-[#87908A]">
               <Clock className="w-4 h-4 text-[#C8FF35]" />
               <span>Open 05:30 — 23:00 Everyday</span>
@@ -139,21 +167,30 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking, onNavigateSchedul
         </div>
       )}
 
-      {/* Sticky Bottom CTA for Mobile (PRD requirement: VIEW CLASSES | JOIN NOW) */}
-      <div className="fixed bottom-0 left-0 right-0 z-30 md:hidden bg-[#151817]/95 backdrop-blur-md border-t border-[#2a2f2c] px-4 py-3 flex gap-3 shadow-2xl">
+      {/* Sticky Bottom CTA for Mobile (VIEW CLASSES | CALL TO BUY | JOIN NOW) */}
+      <div className="fixed bottom-0 left-0 right-0 z-30 md:hidden bg-[#151817]/95 backdrop-blur-md border-t border-[#2a2f2c] px-3 py-2.5 flex items-center gap-2 shadow-2xl">
         <button
           onClick={onNavigateSchedule}
-          className="flex-1 py-3 text-xs font-bold tracking-wider text-center text-[#E9E5DC] bg-[#232725] rounded-full border border-[#373d39] active:scale-98"
+          className="flex-1 py-3 text-[11px] font-bold tracking-wider text-center text-[#E9E5DC] bg-[#232725] rounded-full border border-[#373d39] active:scale-98 whitespace-nowrap"
           id="mobile-sticky-schedule"
         >
-          VIEW CLASSES
+          CLASSES
         </button>
+        <a
+          href="tel:+919987684057"
+          className="px-3.5 py-3 text-[11px] font-bold font-mono text-[#E9E5DC] bg-[#0B0D0C] rounded-full border border-[#373d39] active:scale-98 flex items-center gap-1.5 whitespace-nowrap"
+          title="Call 9987684057 to buy"
+          id="mobile-sticky-call"
+        >
+          <Phone className="w-3.5 h-3.5 text-[#C8FF35]" />
+          <span>BUY: 9987684057</span>
+        </a>
         <button
           onClick={() => onOpenBooking('trial', 'Mobile Sticky Pass')}
-          className="flex-1 py-3 text-xs font-extrabold tracking-wider text-center text-[#0B0D0C] bg-[#C8FF35] rounded-full shadow-[0_0_15px_rgba(200,255,53,0.3)] active:scale-98"
+          className="flex-1 py-3 text-[11px] font-extrabold tracking-wider text-center text-[#0B0D0C] bg-[#C8FF35] rounded-full shadow-[0_0_15px_rgba(200,255,53,0.3)] active:scale-98 whitespace-nowrap"
           id="mobile-sticky-join"
         >
-          JOIN NOW
+          JOIN
         </button>
       </div>
     </>

@@ -133,12 +133,20 @@ export const LocationSection: React.FC = () => {
                 </div>
               </div>
 
-              {/* Concierge Contact */}
-              <div className="mt-6 p-4 rounded-xl bg-[#0B0D0C] border border-[#232725] text-xs font-mono">
-                <div className="text-[#87908A] mb-1">FRONT DESK & CONCIERGE:</div>
-                <a href="tel:+912248920100" className="text-sm font-bold text-[#E9E5DC] hover:text-[#C8FF35] transition-colors flex items-center gap-2">
-                  <Phone className="w-3.5 h-3.5 text-[#C8FF35]" /> +91 (022) 4892 0100
-                </a>
+              {/* Concierge & Membership Sales Contact */}
+              <div className="mt-6 p-4 rounded-xl bg-[#0B0D0C] border border-[#232725] text-xs font-mono space-y-2.5">
+                <div>
+                  <div className="text-[#87908A] mb-1">MEMBERSHIP SALES & PURCHASE HOTLINE:</div>
+                  <a href="tel:+919987684057" className="text-base font-bold text-[#C8FF35] hover:underline transition-colors flex items-center gap-2">
+                    <Phone className="w-4 h-4 text-[#C8FF35]" /> +91 99876 84057
+                  </a>
+                </div>
+                <div className="pt-2 border-t border-[#1C201E]">
+                  <div className="text-[#87908A] mb-1">FRONT DESK & CONCIERGE:</div>
+                  <a href="tel:+912248920100" className="text-xs text-[#E9E5DC] hover:text-[#C8FF35] transition-colors flex items-center gap-2">
+                    <Phone className="w-3.5 h-3.5 text-[#87908A]" /> +91 (022) 4892 0100
+                  </a>
+                </div>
               </div>
             </div>
 

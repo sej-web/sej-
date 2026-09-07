@@ -157,6 +157,21 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                 </div>
               </div>
 
+              {/* Instant Call / WhatsApp option */}
+              <div className="p-4 rounded-xl bg-[#0B0D0C] border border-[#2B302D] max-w-md mx-auto flex items-center justify-between gap-3 text-xs font-mono">
+                <div className="text-left">
+                  <span className="text-[#87908A] block">Instant Activation / Payment:</span>
+                  <span className="text-[#E9E5DC] font-bold">Call or WhatsApp us</span>
+                </div>
+                <a
+                  href="tel:+919987684057"
+                  className="px-4 py-2 rounded-full bg-[#C8FF35] text-[#0B0D0C] font-heading font-extrabold uppercase text-[11px] tracking-wider flex items-center gap-1.5"
+                >
+                  <Phone className="w-3.5 h-3.5" />
+                  <span>9987684057</span>
+                </a>
+              </div>
+
               <button
                 onClick={onClose}
                 className="px-8 py-3.5 bg-[#C8FF35] text-[#0B0D0C] font-heading font-extrabold text-xs uppercase tracking-wider rounded-full hover:bg-[#b8f020] transition-colors"
@@ -166,6 +181,35 @@ export const BookingModal: React.FC<BookingModalProps> = ({
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4">
+              {/* Direct Buy Quick Contact Callout */}
+              <div className="p-3.5 rounded-xl bg-[#0B0D0C] border border-[#2B302D] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
+                <div className="flex items-center gap-2.5 text-center sm:text-left">
+                  <div className="w-7 h-7 rounded-full bg-[#C8FF35]/15 text-[#C8FF35] flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-3.5 h-3.5" />
+                  </div>
+                  <div>
+                    <span className="text-[11px] font-mono text-[#87908A] block">WANT TO BUY OR TALK DIRECTLY?</span>
+                    <span className="font-heading text-xs font-bold text-[#E9E5DC]">CALL OR WHATSAPP: <span className="text-[#C8FF35] font-mono">+91 99876 84057</span></span>
+                  </div>
+                </div>
+                <div className="flex items-center gap-2 w-full sm:w-auto">
+                  <a
+                    href="tel:+919987684057"
+                    className="flex-1 sm:flex-initial px-3.5 py-1.5 rounded-full bg-[#C8FF35] text-[#0B0D0C] font-heading font-extrabold text-[10px] uppercase tracking-wider text-center"
+                  >
+                    CALL NOW
+                  </a>
+                  <a
+                    href="https://wa.me/919987684057?text=Hi%2C%20I%20am%20interested%20in%20purchasing%20a%20plan%20at%20FORGE"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex-1 sm:flex-initial px-3.5 py-1.5 rounded-full bg-[#232725] text-[#E9E5DC] font-heading font-bold text-[10px] uppercase tracking-wider text-center hover:text-[#C8FF35]"
+                  >
+                    WHATSAPP
+                  </a>
+                </div>
+              </div>
+
               {/* Full Name */}
               <div>
                 <label className="block text-xs font-mono uppercase text-[#87908A] mb-1.5">

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Check, Zap, Sparkles, HelpCircle, ArrowRight, ShieldCheck, CheckCircle2 } from 'lucide-react';
+import { Check, Zap, Sparkles, HelpCircle, ArrowRight, ShieldCheck, CheckCircle2, Phone, MessageSquare } from 'lucide-react';
 import { MembershipPlan } from '../types';
 import { MEMBERSHIP_PLANS } from '../data/gymData';
 
@@ -51,6 +51,47 @@ export const MembershipsSection: React.FC<MembershipsSectionProps> = ({ onSelect
                 SAVE 18%
               </span>
             </button>
+          </div>
+        </div>
+
+        {/* Direct Purchase & Instant Onboarding Helpline */}
+        <div className="mb-12 p-6 sm:p-8 rounded-2xl bg-[#0B0D0C] border-2 border-[#C8FF35]/30 hover:border-[#C8FF35] transition-colors flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl">
+          <div className="flex items-center gap-4 text-center md:text-left">
+            <div className="w-14 h-14 rounded-full bg-[#C8FF35]/15 border border-[#C8FF35] text-[#C8FF35] flex items-center justify-center flex-shrink-0 mx-auto md:mx-0">
+              <Phone className="w-6 h-6 animate-pulse" />
+            </div>
+            <div>
+              <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-[#151817] border border-[#2B302D] text-[10px] font-mono text-[#C8FF35] uppercase mb-1">
+                <span>DIRECT MEMBERSHIP SALES</span>
+              </div>
+              <h3 className="font-heading text-xl sm:text-2xl font-bold uppercase text-[#E9E5DC]">
+                WANT TO BUY A MEMBERSHIP? CONTACT US DIRECTLY
+              </h3>
+              <p className="text-xs sm:text-sm text-[#87908A] mt-1">
+                Call or WhatsApp <span className="text-[#C8FF35] font-mono font-bold">+91 99876 84057</span> for instant membership activation, payment links, and corporate discounts.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex flex-wrap sm:flex-nowrap items-center gap-3 w-full md:w-auto justify-center">
+            <a
+              href="tel:+919987684057"
+              className="w-full sm:w-auto px-6 py-3.5 rounded-full bg-[#C8FF35] text-[#0B0D0C] font-heading font-extrabold text-xs uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-[#b8f020] transition-colors shadow-lg active:scale-95 whitespace-nowrap"
+              id="membership-direct-call-cta"
+            >
+              <Phone className="w-4 h-4" />
+              <span>CALL 9987684057</span>
+            </a>
+            <a
+              href="https://wa.me/919987684057?text=Hi%2C%20I%20want%20to%20buy%20a%20FORGE%20Athletic%20Club%20membership"
+              target="_blank"
+              rel="noreferrer"
+              className="w-full sm:w-auto px-6 py-3.5 rounded-full bg-[#1A1D1C] hover:bg-[#222724] text-[#E9E5DC] hover:text-[#C8FF35] border border-[#2B302D] font-heading font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-colors active:scale-95 whitespace-nowrap"
+              id="membership-direct-whatsapp-cta"
+            >
+              <MessageSquare className="w-4 h-4 text-[#C8FF35]" />
+              <span>WHATSAPP US</span>
+            </a>
           </div>
         </div>
 
@@ -130,7 +171,19 @@ export const MembershipsSection: React.FC<MembershipsSectionProps> = ({ onSelect
                     <ArrowRight className="w-4 h-4" />
                   </button>
 
-                  <div className="flex items-center justify-center gap-2 mt-4 text-[11px] font-mono text-[#87908A]">
+                  <div className="mt-3 pt-3 border-t border-[#1C201E] flex items-center justify-between text-[11px] font-mono">
+                    <span className="text-[#87908A]">Instant Buy Hotline:</span>
+                    <a
+                      href="tel:+919987684057"
+                      className="text-[#C8FF35] hover:underline font-bold flex items-center gap-1"
+                      title="Call to buy this plan"
+                    >
+                      <Phone className="w-3 h-3" />
+                      <span>+91 99876 84057</span>
+                    </a>
+                  </div>
+
+                  <div className="flex items-center justify-center gap-2 mt-3 text-[11px] font-mono text-[#87908A]">
                     <ShieldCheck className="w-3.5 h-3.5 text-[#C8FF35]" />
                     <span>Includes 7-day money-back guarantee</span>
                   </div>

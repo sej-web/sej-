@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowUpRight, Instagram, Youtube, Linkedin, Check } from 'lucide-react';
+import { ArrowUpRight, Instagram, Youtube, Linkedin, Check, Phone } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -106,6 +106,16 @@ export const Footer: React.FC = () => {
             <p className="text-[#87908A] mt-1">
               Performance Members: 24/7 RFID Turnstile Ingress
             </p>
+            <div className="mt-4 pt-4 border-t border-[#1C201E]">
+              <span className="text-[#87908A] block text-[11px] mb-1 uppercase font-bold">Direct Membership & Purchase Sales:</span>
+              <a
+                href="tel:+919987684057"
+                className="text-[#C8FF35] hover:underline font-bold text-sm flex items-center gap-1.5"
+              >
+                <Phone className="w-3.5 h-3.5" />
+                <span>+91 99876 84057</span>
+              </a>
+            </div>
           </div>
 
           {/* Social Links */}

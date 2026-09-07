@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Phone, MessageSquare } from 'lucide-react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { TrustBar } from './components/TrustBar';
@@ -119,6 +120,33 @@ export default function App() {
 
       {/* Brand Footer */}
       <Footer />
+
+      {/* Floating Quick Buy Contact Pill (Desktop / Tablet) */}
+      <aside aria-label="Sales Hotline" className="hidden md:flex fixed bottom-6 right-6 z-40 items-center gap-2 bg-[#151817]/95 backdrop-blur-md p-2 pl-4 rounded-full border border-[#2B302D] shadow-2xl hover:border-[#C8FF35] transition-all duration-200">
+        <div className="flex items-center gap-2 text-xs font-mono">
+          <span className="w-2 h-2 rounded-full bg-[#C8FF35] animate-pulse" />
+          <span className="text-[#87908A]">Want to buy?</span>
+          <span className="text-[#E9E5DC] font-bold">+91 99876 84057</span>
+        </div>
+        <a
+          href="tel:+919987684057"
+          className="p-2.5 bg-[#C8FF35] text-[#0B0D0C] rounded-full hover:bg-[#b8f020] transition-colors flex items-center justify-center shadow-md active:scale-95"
+          title="Call 9987684057 to buy"
+          id="floating-call-btn"
+        >
+          <Phone className="w-4 h-4" />
+        </a>
+        <a
+          href="https://wa.me/919987684057?text=Hi%2C%20I%20want%20to%20buy%20a%20FORGE%20membership"
+          target="_blank"
+          rel="noreferrer"
+          className="p-2.5 bg-[#232725] text-[#C8FF35] hover:text-white hover:bg-[#25D366] rounded-full transition-colors flex items-center justify-center border border-[#2B302D] active:scale-95"
+          title="WhatsApp 9987684057 to buy"
+          id="floating-whatsapp-btn"
+        >
+          <MessageSquare className="w-4 h-4" />
+        </a>
+      </aside>
 
       {/* Interactive Reservation / Booking Modal */}
       <BookingModal
