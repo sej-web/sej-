@@ -1,0 +1,6 @@
+{
+  "name": "FORGE / ATHLETIC CLUB",
+  "description": "Premium high-energy athletic fitness club featuring strength training, group classes, expert coaching, commercial-grade equipment, and corporate wellness.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
